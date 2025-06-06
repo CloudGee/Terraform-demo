@@ -21,6 +21,12 @@ RUN ARCH="amd64" \
     && dpkg -i /tmp/tofu.deb || apt-get install -f -y \
     && rm /tmp/tofu.deb
 
+# 安装aws cli
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip" \
+    && unzip /tmp/awscliv2.zip -d /tmp \
+    && /tmp/aws/install \
+    && rm -rf /tmp/awscliv2.zip /tmp/aws
+
 # 创建软链接 terraform -> opentofu，方便直接用 terraform 命令
 RUN ln -s /usr/bin/tofu /usr/bin/terraform
 
