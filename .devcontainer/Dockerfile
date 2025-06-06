@@ -27,4 +27,5 @@ RUN ln -s /usr/bin/tofu /usr/bin/terraform
 COPY post-start.sh /usr/local/bin/post-start
 RUN chmod +x /usr/local/bin/post-start
 
+USER vscode
 RUN tofu -install-autocomplete
