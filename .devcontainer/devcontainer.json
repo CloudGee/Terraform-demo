@@ -1,0 +1,13 @@
+{
+    "name": "CloudGee Terraform",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "postStartCommand": "post-start",
+    "settings": {},
+    "extensions": [
+        "hashicorp.terraform",
+        "hashicorp.hcl"
+    ],
+    "remoteUser": "vscode"
+}
