@@ -22,7 +22,7 @@ RUN ARCH="amd64" \
     && rm /tmp/tofu.deb
 
 # 创建软链接 terraform -> opentofu，方便直接用 terraform 命令
-RUN ln -s /usr/local/bin/opentofu /usr/local/bin/terraform
+RUN ln -s /usr/bin/tofu /usr/bin/terraform
 
 COPY post-start.sh /usr/local/bin/post-start
 RUN chmod +x /usr/local/bin/post-start
