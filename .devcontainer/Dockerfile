@@ -31,4 +31,4 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/aws
 RUN ln -s /usr/bin/tofu /usr/bin/terraform
 
 USER vscode
-RUN tofu -install-autocomplete
+RUN tofu -install-autocomplete && echo 'complete -C "/usr/local/bin/aws_completer" aws' >> ~/.zshrc
