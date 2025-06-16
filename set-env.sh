@@ -33,3 +33,6 @@ aws configure set source_profile "$BASE_PROFILE" --profile "$ASSUME_PROFILE"
 export AWS_PROFILE="$ASSUME_PROFILE"
 
 echo "AWS profile '$ASSUME_PROFILE' with role_arn has been configured and is now active."
+
+export TF_DATA_DIR="$(pwd)/.terraform"
+echo "Terraform data directory set to: $TF_DATA_DIR"

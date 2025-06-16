@@ -10,7 +10,6 @@
         "dockerfile": "Dockerfile"
     },
     "postStartCommand": "post-start",
-    "settings": {},
     "extensions": [
         "hashicorp.terraform",
         "GitHub.copilot",
