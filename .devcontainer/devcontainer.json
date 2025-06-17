@@ -9,6 +9,9 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
+    "features": {
+        "ghcr.io/localstack/devcontainer-feature/localstack-cli": {}
+    },
     "postStartCommand": "post-start",
     "extensions": [
         "hashicorp.terraform",
